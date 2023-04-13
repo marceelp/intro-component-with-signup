@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --dark-green: hsl(154, 55%, 41%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+  --light-gray: hsl(0, 0%, 92%);
+  --white: hsl(100, 100%, 100%);
+  --transparent-shadow: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red);
+  background-image: url("./images/bg-intro-desktop.png");
+}
+
+main {
+  min-width: 350px;
+  width: 80vw;
+  height: 70vh;
+  display: flex;
+}
+
+/* ----------------------------------- */
+/* ---------- Heading Section ---------- */
+/* ----------------------------------- */
+
+.heading-section {
+  width: 50%;
+  margin-right: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--white);
+}
+
+.heading-section h1 {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.6rem;
+}
+
+.heading-section p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--light-gray);
+}
+
+/* ----------------------------------- */
+/* ----------- Form Section ------------ */
+/* ----------------------------------- */
+
+.form-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --------------- */
+/* -- Free Trial -- */
+/* --------------- */
+
+.form-section__free-trial {
+  font-size: 1.2rem;
+  padding: 1.6rem 0;
+  margin: 0 3rem 2rem 3rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  color: var(--grayish-blue);
+  background-color: var(--blue);
+  box-shadow: 0 8px 1px var(--transparent-shadow);
+}
+
+.form-section__free-trial span {
+  font-weight: 600;
+  color: var(--white);
+}
+
+/* ---------- */
+/* --- Form --- */
+/* ---------- */
+
+.form-section__form {
+  margin: 0 3rem;
+  padding: 3.4rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  background-color: var(--white);
+  box-shadow: 0 8px 1px var(--transparent-shadow);
+}
+
+.form-section__form input {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1.6rem;
+  margin-bottom: 0.4rem;
+  border-radius: 0.4rem;
+  border: 0.2px solid var(--grayish-blue);
+  padding: 1.4rem;
+  padding-left: 3rem;
+  color: var(--dark-blue);
+}
+
+.form-section__form .warning1,
+.form-section__form .warning2,
+.form-section__form .warning3,
+.form-section__form .warning4 {
+  color: var(--red);
+  align-self: flex-end;
+  display: none;
+}
+
+.form-section__form button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1.4rem 0;
+  margin-top: 1.6rem;
+  margin-bottom: 1.2rem;
+  border-radius: 0.4rem;
+  border: transparent;
+  color: var(--white);
+  background-color: var(--green);
+  box-shadow: inset 0 -3px 2px var(--dark-green);
+}
+.form-section__form button:hover {
+  cursor: pointer;
+  opacity: 75%;
+}
+
+.form-section__form p {
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--grayish-blue);
+}
+
+.form-section__form p span {
+  color: var(--red);
+  font-weight: 700;
+}
+
+/* ----------------------------------- */
+/* -------- Responsive Design ---------- */
+/* ----------------------------------- */
+
+@media (max-width: 1000px) {
+  .form-section__free-trial {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 780px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .heading-section {
+    width: 100%;
+    padding: 5rem;
+  }
+
+  .form-section {
+    width: 100%;
+  }
+
+  .form-section__form {
+    padding: 1rem 3.4rem;
+    margin-bottom: 5rem;
+  }
+
+  .form-section__free-trial {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .heading-section h1 {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .heading-section h1 {
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    text-align: center;
+  }
+
+  .heading-section p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
